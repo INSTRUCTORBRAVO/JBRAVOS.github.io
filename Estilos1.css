@@ -83,3 +83,64 @@ h2 { /* este estilo afecta a todos los h2 de INDEX2.html */
     
     
 }
+
+.clase_absolute {
+    font-size: 20px;
+    background-color:chartreuse ;
+    height: 250px;
+    width: 200px;
+    position: absolute;
+    top: 500px;   /* de arriba  hacia abajo, osea baja */
+    left: 100px;
+    z-index: -10;
+
+}
+
+.clase_Relative3 {
+    font-size: 20px;
+    background-color:chartreuse ;
+    height: 250px;
+    width: 200px;
+    position: relative;
+
+}
+
+.clase_AbsoluteRelative {
+    font-size: 20px;
+    background-color:chartreuse ;
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    bottom: 300px;  /* de abajo hacia arriba, osea sube */
+    left: 600px;
+    z-index: -5;
+
+}
+
+
+.clase_Fixed {
+    height: 320px;
+    width: 300px;
+    position: fixed;
+    left: 600px;
+    bottom: 300px;
+    z-index: -10;
+
+}
+
+.marca_agua {
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 10;
+
+}
+
+.clase_Sticky {
+    position:sticky;
+    font-size: 40px;
+    top: 0px;
+    left:40px;
+    height: 300px;
+
+}
+
