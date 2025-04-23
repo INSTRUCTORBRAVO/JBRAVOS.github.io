@@ -42,8 +42,8 @@ h2 {  /* este estilo afecta a todos los h2 en index2.thml */
     height: 250px;
     width: 200px;
     position: absolute;
-    top: 200px;
-    left: 100px;
+    top: 300px;
+    left: 600px;
 }
 .clase_relative {
     font-size: 20px;
@@ -156,17 +156,38 @@ width: 500px;
 
 
 .claseNav a:hover {
-    background-color: chartreuse;
+    background-color: rgb(255, 115, 0);
 
 }
 
+.claseNav ul {
+    list-style-type: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
 
+.claseNav li a {
+  text-decoration: none;
+  padding: 6px 11px;
+  display: block;
+}
 
+.claseNav >li  {
+ float :left;
+}
 
+.claseNav li ul {
+    
+display: none;
+position: absolute;
+min-width: 140px;
+background-color: yellow; 
 
+    }
 
-
-
-
-
+.claseNav li:hover>ul {
+   display: block;  
+   background-color: yellow;  
+}
 

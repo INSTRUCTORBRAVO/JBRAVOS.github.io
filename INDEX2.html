@@ -34,8 +34,30 @@
     
     </nav>
 
+    <h1>MENU SECUNDARIO con SUBMENU</h1>
+    <nav >
+      <ul class="claseNav">
+         <li> <a  href="https://www.gob.pe/indecopi">  INDECOPI   </a>
+             <ul>  <!-- INICIO SUBMENU -->
+                   <li> <a class="claseNav" href="https://www.gob.pe/institucion/indecopi/tema/deudas-o-multas">  DEUDAS Y MULTAS </a> </li>
+                   <li> <a class="claseNav" href="https://www.gob.pe/institucion/indecopi/tema/reclamos">  RECLAMOS </a> </li>
+             </ul>
+         </li>
+   
+         <li> <a  href="https://www.defensoria.gob.pe/">  DEFENSORIA DEL PUEBLO     </a>
+              <ul>  <!-- INICIO SUBMENU -->
+                  <li> <a class="claseNav" href="https://www.gob.pe/institucion/indecopi/tema/deudas-o-multas">  SUBMENU 1 </a> </li>
+                  <li> <a class="claseNav" href="https://www.gob.pe/institucion/indecopi/tema/reclamos">  SUBMENU 2 </a> </li>
+              </ul>
+         </li> 
+     </ul>
+   
+     </nav>
+   <br>
+
+
     <!--stage changed siver para preparar en desktop y commit para confirmar el cambio en desktop-->
-    <h1>esta vercion de la rama 1</h1> 
+    <h1>esta version de la rama 1</h1> 
     <Picture>LA LINEA DE TIEMPO </Picture>
     <ol> 
         <li>leche</li>
@@ -65,7 +87,7 @@
           <a href="https://open.spotify.com/intl-es" target="_blank"  >  ir a spotify</a>
           <!--target blank permite abrir el enlace en otra otrs pestaña-->
           <!--uso de imagenes-->
-          <img src="juventus.webp" alt="imagen no disponible" srcset="" width="300px" height="500px">
+          <img src="C:\Users\DOCENTE-NORTE\Documents\GitHub\JBRAVOS.github.io\imagenes\escudo4.jpg" alt="imagen no disponible" srcset="" width="300px" height="500px">
           <img src="https://store.juventus.com/images/juventus/products/large/JU24A01.webp" alt="no disponible"
           width="20%" height="20%" 
           >
@@ -103,7 +125,7 @@
                   en un bloque inline -----------------------------------</P>
                 <img class="clase_absolute"
                    style="border:9px dotted ; color:rgb(253, 55, 29)"
-                    src="C:\Users\LAB08-NORTE\Documents\GitHub\Jes-s-Github\imagenes\imagen 005.jpg"
+                    src="C:\Users\DOCENTE-NORTE\Documents\GitHub\JBRAVOS.github.io\imagenes\escudo5.jpg"
                            alt="IMAGEN NO DISPONIBLE"
                     width="400"       height="341"      >
                 </div>
@@ -116,7 +138,7 @@
                   <p>imagen es absolute respeto al div relative</p>
                 <img class="clase_relative3"
                    style="border:9px dotted ; color:rgb(253, 55, 29)"
-                    src="C:\Users\LAB08-NORTE\Documents\GitHub\Jes-s-Github\imagenes\imagen 005.jpg"
+                    src="C:\Users\DOCENTE-NORTE\Documents\GitHub\JBRAVOS.github.io\imagenes\escudo3.jpg"
                            alt="IMAGEN NO DISPONIBLE"
                     width="400"       height="341"      >
                 </div>
@@ -126,8 +148,8 @@
               <div>
                 
                 <img class="clase_fixed  ; marca_agua"
-                style="border: 9px solid;color: deeppink;(253,55,29)" 
-                src="C:\Users\LAB08-NORTE\Documents\GitHub\Jes-s-Github\imagenes\imagen 07.avif" alt="imagen no disponible"
+                style="border: 9px solid; color:aquamarine " 
+                src="C:\Users\DOCENTE-NORTE\Documents\GitHub\JBRAVOS.github.io\imagenes\escudo7.jpg" alt="imagen no disponible"
                 
             width="300"  height="400">
             
@@ -138,8 +160,8 @@
               <div style="height: 1000px;">
                 
                 <img class="clase_stichy  ; "
-                style="border: 9px solid;color: deeppink;(253,55,29)" 
-                src="C:\Users\LAB08-NORTE\Documents\GitHub\Jes-s-Github\imagenes\imagen 07.avif" alt="imagen no disponible"
+                style="border: 9px solid ;   color: deeppink(253,55,29)" 
+                src="C:\Users\DOCENTE-NORTE\Documents\GitHub\JBRAVOS.github.io\imagenes\escudo6.webp" alt="imagen no disponible"
                 
             width="300"  height="400">
             
@@ -199,7 +221,7 @@
 <div class="tipoflex">
   <div style="background-color: darkmagenta;"> elemento 1 de flex </div>
   <div style="background-color: blue;"> elemento 2 de flex</div>
-  <img src="C:\Users\LAB01-NORTE\Documents\GitHub\Jes-s-Github\imagenes\imagen 001.webp" width="100px"  height="100px" 
+  <img src="C:\Users\DOCENTE-NORTE\Documents\GitHub\JBRAVOS.github.io\imagenes\escudo7.jpg" width="100px"  height="100px" 
   alt="imagen no disponible">
   <div style="background-color: rgb(41, 209, 69);"> elemento 3 de flex </div>
 
@@ -227,7 +249,64 @@
 
 
 
+<h2> FORMULARIO DE REGISTRO </h2>
 
+
+<form action="TODOSOBREMI.html"   method="post">
+
+<p> <label for="nombre"> Nombre: <input type="text" id="nombre"> </label> </p>
+<p> <label for="apellido"> Apellido: <input type="text" id="apellido"> </label> </p>
+<p> <label for="edad"> Edad: <input type="text" id="edad"> </label> </p>
+
+<p> <label for="observacion"> Observacion: 
+        <textarea name="observacion" id="observacion" 
+          style="height:180px ;  width:300px ; font-size: 25px;">
+        </textarea>
+     </label> 
+</p>
+
+<p> 
+    <label for="estatura"> Estatura     
+        <select name="grupoestatura" id="estatura">
+          <option value="Seleccione"> Seleccione  </option>
+            <option value="menor de 1.50m"> menor de 1.50m  </option>
+            <option value="de 1.50m  a 1.59"> de 1.50m  a 1.59  </option>
+            <option value="de 1.60m  a 1.69"> de 1.60m  a 1.69  </option>
+            <option value="mayor o igual a 1.70m"> mayor o igual a 1.70m  </option>
+
+
+        </select>
+    </label>
+</p>
+
+<p> <label > Curso llevados  </label>
+  <br>
+    <input type="checkbox" name="cursos" value="matematica" id="matematica"  >
+      <label for="matematica"> Matematica </label> <br>
+    <input type="checkbox" name="cursos" value="LENGUAJE DSS" id="LDSS"  >
+      <label for="LDSS"> LENGUAJE DSS </label>    <br>
+    <input type="checkbox" name="cursos" value="Introduccion investigacion" id="INTRO_INV"  >
+      <label for="INTRO_INV"> Introduccion investigacion </label>    <br>
+    <input type="checkbox" name="cursos" value="NUEvas tendencias" id="Nuevas_Tendencias"  >
+      <label for="Nuevas_Tendencias"> NUEvas tendencias </label>  <br>
+
+
+
+
+</p>
+  
+
+
+
+<label for="fecha"> SELECCIONE FECHA: 
+  <input style="font-size:25px" type="date" name="fecha" id="fecha">
+</label>
+
+<br><br>
+<button type="submit" style="font-size:30px ;" > enviar </button>
+
+
+</form>
 
                                                                                         
 
