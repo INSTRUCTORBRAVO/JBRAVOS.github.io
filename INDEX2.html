@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>instituto certus</title>
 </head>
+
 <body style="background-color: rgb(161, 177, 118);" > 
     <H1 style="background-color: aqua(129, 102, 172);">
         PAGINA CON CCS </H1> 
@@ -254,9 +255,9 @@
 
 <form action="TODOSOBREMI.html"   method="post">
 
-<p> <label for="nombre"> Nombre: <input type="text" id="nombre"> </label> </p>
+<p> <label for="nombre"  > Nombre: <input type="text" id="nombre"  required   > </label> </p>
 <p> <label for="apellido"> Apellido: <input type="text" id="apellido"> </label> </p>
-<p> <label for="edad"> Edad: <input type="text" id="edad"> </label> </p>
+<p> <label for="edad"> Edad: <input type="number" id="edad" min="18" max="80"> </label> </p>
 
 <p> <label for="observacion"> Observacion: 
         <textarea name="observacion" id="observacion" 
@@ -267,7 +268,7 @@
 
 <p> 
     <label for="estatura"> Estatura     
-        <select name="grupoestatura" id="estatura">
+        <select name="grupoestatura" id="estatura"    >
           <option value="Seleccione"> Seleccione  </option>
             <option value="menor de 1.50m"> menor de 1.50m  </option>
             <option value="de 1.50m  a 1.59"> de 1.50m  a 1.59  </option>
@@ -291,18 +292,54 @@
       <label for="Nuevas_Tendencias"> NUEvas tendencias </label>  <br>
 
 
-
-
 </p>
-  
 
+<p><label>Ciclo actual</label> <br>
+    <input style="scale:1.5 ;" id="Primero" type="radio" name="ciclo" value="Primero">
+    <label for="Primero">Primero</label><br>
+    <input style="scale:1.5 ;" id="Segundo" type="radio" name="ciclo" value="Segundo">
+    <label for="Segundo">Segundo</label><br>
+    <input style="scale:1.5 ;" id="Tercero" type="radio" name="ciclo" value="Tercero">
+    <label for="Tercero">Tercero</label><br>
+    <input style="scale:1.5 ;" id="Cuarto"  type="radio" name="ciclo" value="Cuarto">
+    <label for="Cuarto">Cuarto</label><br>
+    <input style="scale:1.5 ;" id="Quinto" type="radio" name="ciclo" value="Quinto">
+    <label for="Quinto">Quinto</label><br>
+    <input style="scale:1.5 ;" id="Sexto" type="radio" name="ciclo" value="Sexto" >
+    <label for="Sexto">Sexto</label>
+</p>
 
 
 <label for="fecha"> SELECCIONE FECHA: 
-  <input style="font-size:25px" type="date" name="fecha" id="fecha">
+  <input style="font-size:25px" type="date" name="fecha" id="fecha"    >
+</label>
+
+
+
+
+<br><br>
+
+
+<label for="clave"> SELECCIONE CLAVE: 
+  <input  style="font-size:15px" type="password"    name="clave"  id="clave"  autofocus  
+    minlength="5" maxlength="10"           >
 </label>
 
 <br><br>
+
+<label for="resetear"> RESETEAR: 
+  <input style="font-size:15px" type="reset" name="resetear" id="resetear"  >
+</label>
+
+<br><br>
+<label for="email"> Ingrese Email: 
+  <input style="font-size:20px" type="email" name="correo" id="email" placeholder="@certus.edu.pe">
+</label>
+
+
+
+<br>
+
 <button type="submit" style="font-size:30px ;" > enviar </button>
 
 
