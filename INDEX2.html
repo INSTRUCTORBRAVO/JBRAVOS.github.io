@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos1.css">
+    <script type="text/javascript" src="SCRIPT1.js" >   </script>
 
     <title>instituto certus- PAGINA CON ccs</title>
 </head>
@@ -152,19 +153,19 @@
                 style="border: 9px solid; color:aquamarine " 
                 src="C:\Users\DOCENTE-NORTE\Documents\GitHub\JBRAVOS.github.io\imagenes\escudo7.jpg" alt="imagen no disponible"
                 
-            width="300"  height="400">
+            width="300"  height="900">
             
               </div>
             
             
-              <h2>POSICIONAMIENTO stochy</h2>
-              <div style="height: 1000px;">
+              <h2>POSICIONAMIENTO stIKY</h2>
+              <div style="height: 1800px;">
                 
-                <img class="clase_stichy  ; "
+                <img class="clase_sticky  "
                 style="border: 9px solid ;   color: deeppink(253,55,29)" 
                 src="C:\Users\DOCENTE-NORTE\Documents\GitHub\JBRAVOS.github.io\imagenes\escudo6.webp" alt="imagen no disponible"
                 
-            width="300"  height="400">
+            width="600"  height="800">
             
             
             <p style="font-size: 40px;">
@@ -197,6 +198,8 @@
           al final 
         </h4>
 
+        
+        
         <h2>uso de visuaizacion display </h2>
 
 <h3> elementos desaparecidos medienta display nose </h3>
@@ -217,7 +220,7 @@
  
 
 
-<h2>so de display flex </h2>
+<h2> uso de display flex </h2>
 
 <div class="tipoflex">
   <div style="background-color: darkmagenta;"> elemento 1 de flex </div>
@@ -348,11 +351,38 @@
                                                                                         
 
 
+<div  style="font-size: 30px;" > Contenedor Resultado en java script 
+   <div id="resultado" style="font-size: 30px;">
+    <p>  OPERACION SUMA </p>
+   </div>
+</div>
+
+<script>
+  window.alert("Bienvenidos"); // comando de windows
+  /* javascript acepta los 2 tipos de comentario  */
+  var valor1 = 40;   var valor2 = 60;
+  var suma = valor1 +valor2;    var resta = valor1 -valor2;
+  document.write("<br> <br><br> FIN DE PAGINA"); // lo realiza al ultimo del script
+
+  console.log("El valor de la suma de ",valor1," con ",valor2 ," es :",suma);
+  console.log("El valor de la resta de ",valor1," con ",valor2 ," es :",resta);
+  document.getElementById('resultado').innerHTML=
+  " <br>El valor de la suma de "+valor1+" con "+valor2 +" es :"+suma+ "<br>"  
+  + "El valor de la resta de "+valor1+" con "+valor2 +" es :"+resta;  
+
+</script>
 
 
+<section>
+  <h1 style="font-size:40px ;">MANIPULACION DEL DOM </h1>
+    <p id="ejmDOM1" style="font-size:25px ;">
+      Este es un Texto inicial a aplicar DOM 
+    </p>
 
-
-
+    <button style="font-size:25px ;"
+         onclick="FCambioColor()" > CAMBIO COLOR
+    </button>
+</section>
 
 
 </body>
