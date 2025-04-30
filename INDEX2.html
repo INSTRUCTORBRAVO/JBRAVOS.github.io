@@ -71,7 +71,7 @@
     
 <h3 class="textoanaranjado"> hola certus </h3>
 
-<h2> sesien jueves <BR>
+<h2> sesion jueves <BR>
     SEMANA 2 </h1>
     <h2 class="">uso de bloque en linea</h2>
 
@@ -258,9 +258,9 @@
 
 <form action="TODOSOBREMI.html"   method="post">
 
-<p> <label for="nombre"  > Nombre: <input type="text" id="nombre"  required   > </label> </p>
-<p> <label for="apellido"> Apellido: <input type="text" id="apellido"> </label> </p>
-<p> <label for="edad"> Edad: <input type="number" id="edad" min="18" max="80"> </label> </p>
+<p> <label for="nombre"  > Nombre: <input type="text" id="nombre" class="datosPersonales" required   > </label> </p>
+<p> <label for="apellido"> Apellido: <input type="text" id="apellido" class="datosPersonales"> </label> </p>
+<p> <label for="edad"> Edad: <input type="number" id="edad"  class="datosPersonales" min="18" max="80"> </label> </p>
 
 <p> <label for="observacion"> Observacion: 
         <textarea name="observacion" id="observacion" 
@@ -343,6 +343,8 @@
 
 <br>
 
+<button type="button" onclick="FCapturarNombre()">Copiar NOmbre a observaciones</button>
+
 <button type="submit" style="font-size:30px ;" > enviar </button>
 
 
@@ -379,9 +381,21 @@
       Este es un Texto inicial a aplicar DOM 
     </p>
 
+    <p class="classDOM1" style="font-size:25px ;">Texto 1 de classDOM1</p>
+    <p class="classDOM1" style="font-size:25px ;">Texto 2 de classDOM1</p>
+    <h2 class="classDOM1" style="font-size:25px ;">Texto 3 de classDOM1 y Tag h2</h2>
+
     <button style="font-size:25px ;"
          onclick="FCambioColor()" > CAMBIO COLOR
     </button>
+    <button style="font-size:25px ;"
+         onclick="FCambioClase1()" > CAMBIO por CLASE
+    </button>
+    <button style="font-size:25px ;"
+         onclick="FCambioTag1()" > CAMBIO POR TAG h2
+    </button>
+
+
 </section>
 
 
