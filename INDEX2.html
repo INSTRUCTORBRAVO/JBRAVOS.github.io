@@ -343,7 +343,10 @@
 
 <br>
 
-<button type="button" onclick="FCapturarNombre()">Copiar NOmbre a observaciones</button>
+<button style="font-size:30px ;" type="button" 
+onclick="FCapturarNombre() ">Copiar NOmbre a observaciones</button>
+<br> <br><br>
+
 
 <button type="submit" style="font-size:30px ;" > enviar </button>
 
@@ -381,9 +384,9 @@
       Este es un Texto inicial a aplicar DOM 
     </p>
 
-    <p class="classDOM1" style="font-size:25px ;">Texto 1 de classDOM1</p>
-    <p class="classDOM1" style="font-size:25px ;">Texto 2 de classDOM1</p>
-    <h2 class="classDOM1" style="font-size:25px ;">Texto 3 de classDOM1 y Tag h2</h2>
+    <p class="classDOM1" style="font-size:25px ;">Texto 1 de classDOM1 [0]</p> 
+    <p class="classDOM1" style="font-size:25px ;">Texto 2 de classDOM1[1]</p>
+    <h2 class="classDOM1" style="font-size:25px ;">Texto 3 de classDOM1[2] y Tag h2</h2>
 
     <button style="font-size:25px ;"
          onclick="FCambioColor()" > CAMBIO COLOR
@@ -395,8 +398,20 @@
          onclick="FCambioTag1()" > CAMBIO POR TAG h2
     </button>
 
+<h2>  AGREGACION DE TEXTO CON CONCATENACION PERMANENTE    </h2>
+
+<button onclick="FAgregarTextoPermanente()"> Agregar texto a primera variable</button>
 
 </section>
+
+
+<h2> USO DE CREATE ELEMENT </h2>
+
+<div id="idCrearH1"> 
+  
+
+<button onclick="FcrearH1()"> CREAR H1</button>
+</div>
 
 
 </body>
