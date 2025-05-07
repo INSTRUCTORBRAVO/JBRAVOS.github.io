@@ -1,5 +1,24 @@
 let VarGlobal1="texto de variable global";
 
+document.addEventListener("DOMContentLoaded", () => {
+const numCole = document.getElementById("numColegios");
+document.getElementById("numColegios").addEventListener("input",(event)=> {
+  let content ="";
+  const cantR=event.target.value;
+  const vTexto1 = document.getElementById("ejmDOM1");
+  vTexto1.innerText= cantR;   
+  document.getElementById('observacion').value = cantR;
+  for(let i=0; i<cantR ;i++)
+  {
+    content=content + `<div> <label> Colegio ${i+1} </label>
+                        <input type="text" id="cole[${i}" > </div>`;
+  }
+document.getElementById("DetalleColegios").innerHTML=content;
+
+});
+});
+
+
 function FCambioColor(){
     var varTemporal= "texto temporal";
     let vTexto1 = document.getElementById("ejmDOM1");
@@ -183,7 +202,8 @@ radios.forEach(function(radio) {
    radio.addEventListener('change', function(event) {
     console.log("Color seleccionado:", event.target.value);
     const cantidad=event.target.value;
-   
+   // radio es el elemento radio
+   //
     document.getElementById('observacion').value = cantidad;
   });
 }
@@ -191,27 +211,5 @@ radios.forEach(function(radio) {
 
 }
 
-
-
-
   //document.getElementById('observacion').value = varciclo[2].value;
 
- 
- 
- 
- 
- /*
-  document.getElementById("Segundo").addEventListener("input",(event)=> {
-    let content ="";
-    const cantidad=event.target.value;
-   
-    document.getElementById('observacion').value = varciclo[2].value;
-    for(let i=0; i<cantidad ;i++)
-    {
-      console.log("Texto",i);
-    }
-
-
-})
-
-*/
