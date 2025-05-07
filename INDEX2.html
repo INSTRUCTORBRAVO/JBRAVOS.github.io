@@ -258,9 +258,9 @@
 
 <form action="TODOSOBREMI.html"   method="post">
 
-<p> <label for="nombre"  > Nombre: <input type="text" id="nombre" class="datosPersonales" required   > </label> </p>
-<p> <label for="apellido"> Apellido: <input type="text" id="apellido" class="datosPersonales"> </label> </p>
-<p> <label for="edad"> Edad: <input type="number" id="edad"  class="datosPersonales" min="18" max="80"> </label> </p>
+<p> <label for="nombre"  > Nombre: <input type="text" name="nombre"  id="nombre" class="datosPersonales" required   > </label> </p>
+<p> <label for="apellido"> Apellido: <input type="text" name="apellido" id="apellido" class="datosPersonales"> </label> </p>
+<p> <label for="edad"> Edad: <input type="number" id="edad" name="edad"  class="datosPersonales" min="18" max="80"> </label> </p>
 
 <p> <label for="observacion"> Observacion: 
         <textarea name="observacion" id="observacion" 
@@ -344,8 +344,22 @@
 <br>
 
 <button style="font-size:30px ;" type="button" 
-onclick="FCapturarNombre() ">Copiar NOmbre a observaciones</button>
+onclick="FCapturarNombre()">       Copiar NOmbre a observaciones  </button>
 <br> <br><br>
+
+
+
+
+
+<button style="font-size:30px ;" type="button" 
+onclick="FValidarCiclo() ">Validar formulario</button>
+<br> <br><br>
+
+
+<button style="font-size:30px ;" type="button" 
+onclick="FCrearDatosCiclo() ">Ingresar datos por ciclo</button>
+<br> <br><br>
+
 
 
 <button type="submit" style="font-size:30px ;" > enviar </button>

@@ -94,14 +94,18 @@ function FCapturarNombre(){
     vTexto1.style.color="red";
     
     var valor1 =vTexto1.value; // value obtiene el contenido de la caja de texto nombre
-    var valor2 ="";
-    vTexto3.value=valor1;
-    document.getElementById("observacion").value = valor1;//textarea ya captura el nombre
-   //foreach recorre todo el contenido del array de la clase datosPersonales
+    var valor2 =""; //tipo string 
+    vTexto3.value=valor1; // asigna el nombre a la clave
+   
+    
+    //foreach recorre todo el contenido del array de la clase datosPersonales
     vTexto2.forEach(input => {
-        valor2 =valor2 +  `${input.name}: ${input.value}\n`; // alt+96
+        valor2 = valor2 + `${input.name}: ${input.value} : ${input.id}  \n`;  // alt+96 
+        input.style.border="2px solid orange";
+      //para comillas tipotexto permiten colocar variables del form y convertirlas a texto mediante $
       });
 
+      vTexto2[1].style.backgroundColor="green";
     document.getElementById('observacion').value = valor2;
     console.log('El valor del nombre es:', valor1);
 }
@@ -143,3 +147,71 @@ function FEliminarConcat()
     }
   //removeChild funciona cuando un nodo(class, id, etx) esta dentro de otro
 }
+
+
+function FValidarCiclo()
+{
+// de acuerdo al ciclo respectivo, se deb abrir el doble de cajas de texto para completar datos.
+  //var varciclo =document.getElementById("Segundo");
+  const varciclo =document.getElementsByName("ciclo");
+
+  for (let i = 0; i < varciclo.length; i++) {
+    if (varciclo[i].checked==true) {
+      //alert("Seleccionaste: " + varciclo[i].value);
+      document.getElementById('observacion').value = varciclo[i].value;
+      return; // Detener el bucle una vez que se encuentre el seleccionado
+    }
+  }
+ 
+
+
+}
+
+
+
+
+
+
+
+
+
+function FCrearDatosCiclo()  
+{
+const radios = document.querySelectorAll('input[name="ciclo"]');
+
+radios.forEach(function(radio) {
+   radio.addEventListener('change', function(event) {
+    console.log("Color seleccionado:", event.target.value);
+    const cantidad=event.target.value;
+   
+    document.getElementById('observacion').value = cantidad;
+  });
+}
+);
+
+}
+
+
+
+
+  //document.getElementById('observacion').value = varciclo[2].value;
+
+ 
+ 
+ 
+ 
+ /*
+  document.getElementById("Segundo").addEventListener("input",(event)=> {
+    let content ="";
+    const cantidad=event.target.value;
+   
+    document.getElementById('observacion').value = varciclo[2].value;
+    for(let i=0; i<cantidad ;i++)
+    {
+      console.log("Texto",i);
+    }
+
+
+})
+
+*/
