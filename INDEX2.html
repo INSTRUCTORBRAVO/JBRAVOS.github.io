@@ -262,7 +262,7 @@
 <p> <label for="apellido"> Apellido: <input type="text" name="apellido" id="apellido" class="datosPersonales"> </label> </p>
 <p> <label for="edad"> Edad: <input type="number" id="edad" name="edad"  class="datosPersonales" min="18" max="80"> </label> </p>
 
-<p> <label for="observacion"> Observacion: 
+<p> <label for="observacion"  style="font-size: 30px;"> Observacion: 
         <textarea name="observacion" id="observacion" 
           style="height:180px ;  width:300px ; font-size: 25px;">
         </textarea>
@@ -287,6 +287,7 @@
 <p style="font-size: 20px;"> <label for="numColegios"> Numero Colegios que estudió: <input type="number" id="numColegios" name="numColegios"  style="font-size: 20px;" min="1" max="12"> </label> </p>
 
 <div id="DetalleColegios"> DEtalle Estudios: </div>
+
 <br>
 <p> <label > Curso llevados  </label>
   <br>
@@ -353,16 +354,13 @@ onclick="FCapturarNombre()">       Copiar NOmbre a observaciones  </button>
 <br> <br><br>
 
 
-
-
-
 <button style="font-size:30px ;" type="button" 
-onclick="FValidarCiclo() ">Validar formulario</button>
+onclick="FValidarCiclo()">Enviar ciclo a Observacion</button>
 <br> <br><br>
 
 
 <button style="font-size:30px ;" type="button" 
-onclick="FCrearDatosCiclo() ">Ingresar datos por ciclo</button>
+onclick="FCrearDatosCiclo() ">Enviar ciclo a observacion automatico</button>
 <br> <br><br>
 
 

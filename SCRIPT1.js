@@ -1,22 +1,5 @@
 let VarGlobal1="texto de variable global";
 
-document.addEventListener("DOMContentLoaded", () => {
-const numCole = document.getElementById("numColegios");
-document.getElementById("numColegios").addEventListener("input",(event)=> {
-  let content ="";
-  const cantR=event.target.value;
-  const vTexto1 = document.getElementById("ejmDOM1");
-  vTexto1.innerText= cantR;   
-  document.getElementById('observacion').value = cantR;
-  for(let i=0; i<cantR ;i++)
-  {
-    content=content + `<div> <label> Colegio ${i+1} </label>
-                        <input type="text" id="cole[${i}" > </div>`;
-  }
-document.getElementById("DetalleColegios").innerHTML=content;
-
-});
-});
 
 
 function FCambioColor(){
@@ -121,7 +104,7 @@ function FCapturarNombre(){
     vTexto2.forEach(input => {
         valor2 = valor2 + `${input.name}: ${input.value} : ${input.id}  \n`;  // alt+96 
         input.style.border="2px solid orange";
-      //para comillas tipotexto permiten colocar variables del form y convertirlas a texto mediante $
+      // para comillas tipotexto permiten colocar variables del form y convertirlas a texto mediante $
       });
 
       vTexto2[1].style.backgroundColor="green";
@@ -148,12 +131,14 @@ function FUsoFor1()
   
 }  // fin de function
 
+
 function FEliminarConcat()
 {
   const vTextoClass = document.getElementsByClassName("classFOR1");
   let rpta =prompt("Estas seguro de eliminar el texto concatenado?(S/N)",'');
   if (rpta=="S" || rpta=="s")  //  doble || significa o
-    { vTextoClass[3].remove();  // eliminar la class de posicion [3]
+    { let rpta2 =prompt("Ingrese el numero de fila a eliminar",'');
+      vTextoClass[rpta2].remove();  // eliminar la class de posicion [rpta2]
       alert("CONCATENCION ELMINADA");
     }  
   else
@@ -170,7 +155,6 @@ function FEliminarConcat()
 
 function FValidarCiclo()
 {
-// de acuerdo al ciclo respectivo, se deb abrir el doble de cajas de texto para completar datos.
   //var varciclo =document.getElementById("Segundo");
   const varciclo =document.getElementsByName("ciclo");
 
@@ -182,8 +166,6 @@ function FValidarCiclo()
     }
   }
  
-
-
 }
 
 
@@ -200,16 +182,55 @@ const radios = document.querySelectorAll('input[name="ciclo"]');
 
 radios.forEach(function(radio) {
    radio.addEventListener('change', function(event) {
-    console.log("Color seleccionado:", event.target.value);
-    const cantidad=event.target.value;
+    console.log("Ciclo seleccionado:", event.target.value);
+    const cantidad = event.target.value;
+  //event es el evento, target es el elemento radio, value es su valor del radio
    // radio es el elemento radio
    //
     document.getElementById('observacion').value = cantidad;
   });
 }
 );
-
 }
 
-  //document.getElementById('observacion').value = varciclo[2].value;
+///////
+
+
+document.addEventListener("DOMContentLoaded", () => {  
+  const radios = document.querySelectorAll('input[name="ciclo"]');
+
+radios.forEach(function(radio) {
+   radio.addEventListener('change', function(event) {
+    console.log("Ciclo seleccionado:", event.target.value);
+    const cantidad = event.target.value;
+  //event es el evento, target es el elemento radio, value es su valor del radio
+   // radio es el elemento radio
+   //
+    document.getElementById('observacion').value = cantidad;
+  });
+}
+);
+  });
+
+
+
+//////
+
+document.addEventListener("DOMContentLoaded", () => {
+  const numCole = document.getElementById("numColegios");
+  document.getElementById("numColegios").addEventListener("input",(event)=> {
+    let content ="";
+    const cantR=event.target.value;
+    const vTexto1 = document.getElementById("ejmDOM1");
+    vTexto1.innerText= cantR;   
+    document.getElementById('observacion').value = cantR;
+    for(let i=0; i<cantR ;i++)
+    {
+      content=content + `<div> <label> Colegio ${i+1} </label>
+                          <input type="text" id="cole[${i}" > </div>`;
+    }
+  document.getElementById("DetalleColegios").innerHTML=content;
+  
+  });
+  });
 
