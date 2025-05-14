@@ -218,19 +218,77 @@ radios.forEach(function(radio) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const numCole = document.getElementById("numColegios");
-  document.getElementById("numColegios").addEventListener("input",(event)=> {
+  numCole.addEventListener("input",(event)=> {
+    
     let content ="";
     const cantR=event.target.value;
-    const vTexto1 = document.getElementById("ejmDOM1");
+    const vTexto1 = document.getElementById("ejmDOM1"); //para validar el valor
     vTexto1.innerText= cantR;   
-    document.getElementById('observacion').value = cantR;
+    document.getElementById('observacion').value = cantR;  //para validar el valor
     for(let i=0; i<cantR ;i++)
     {
       content=content + `<div> <label> Colegio ${i+1} </label>
-                          <input type="text" id="cole[${i}" > </div>`;
+                          <input type="text" id="cole[${i}]" > </div>`;
     }
   document.getElementById("DetalleColegios").innerHTML=content;
   
   });
   });
 
+
+  function FVerificacion() {
+
+  let nombre1 =prompt("Ingresa tu primer nombre",'');
+  let nombre2 =prompt("Ingresa tu segundo nombre",'');
+  let apellido1 =prompt("Ingresa tu primer apellido",'');
+  let apellido2 =prompt("Ingresa tu segundo apellido",'');
+
+
+  let longitud1 = nombre1.length;
+  let longitud2 = nombre2.length;
+  let longitudapellido1 = apellido1.length;
+  let longitudapellido2 = apellido2.length;
+
+  let textoconcat="";
+
+  if( longitud1 < longitud2 ) 
+    {
+      alert("El primer nombre:"+ nombre1 +"es menor al segundo nombre:"+ nombre2 );
+      textoconcat = nombre2 + nombre1; // concatenado y asignado a textoconcat
+    
+    }
+  else
+    {  if(longitud1 > longitud2)
+       {
+         alert("El primer nombre:"+nombre1 +"es mayor al segundo nombre:"+ nombre2 );
+          textoconcat = nombre1 + nombre2; // concatenado y asignado a textoconcat
+       }
+       else   // caso por defecto igual
+       {
+         alert("El primer nombre:"+nombre1 +"es IGUAL en longitud al segundo nombre:"+ nombre2 );
+          textoconcat = nombre1 + nombre2; // da lo mismo el orden de concatenacion
+       }
+    }  
+   
+   //// condicionales para apellido
+    if( longitudapellido1 < longitudapellido2 ) 
+    {
+      alert("El primer apellido:"+ apellido1 +"es menor al segundo apellido:"+ apellido2 );
+      textoconcat = apellido2 + apellido1; // concatenado y asignado a textoconcat
+    
+    }
+  else
+    {  if(longitudapellido1 > longitudapellido2)
+       {
+         alert("El primer apellido:"+apellido1 +"es mayor al segundo apellido:"+ apellido2 );
+          textoconcat = apellido1 + apellido2; // concatenado y asignado a textoconcat
+       }
+       else   // caso por defecto igual
+       {
+         alert("El primer apellido:"+apellido1 +"es IGUAL en longitud al segundo apellido:"+ apellido2 );
+          textoconcat = apellido1 + apellido2; // da lo mismo el orden de concatenacion
+       }
+    } 
+      
+    alert("apellidos concatenados :"+textoconcat);
+  }
